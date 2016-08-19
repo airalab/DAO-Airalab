@@ -15,3 +15,7 @@
 #### Airalab DAO ether ledger :: [abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/TokenEther.json)
 
 > 0x15d2b79ded1dd856070fc68e9ff4c1896934b14f
+
+#### Airalab Market :: [abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Market.json)
+
+> 0xFE7D3D1b1749863F8a3F24c9ACC0AF282109F416
