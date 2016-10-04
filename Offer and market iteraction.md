@@ -10,19 +10,19 @@
 
 ### Не синхронизированный кошелек:
 
-![Screenshot 1](/img/Screenshot_1.png)
+![Screenshot 1](/img/Offer and Market/Screenshot_1.png)
 
 Обращаем внимание на информацию между `Send` и `Contracts`. Там указано, по-порядку: количество пиров, количество загруженных блоков, время от последнего загруженного блока. Если у вас количество пиров равно 0, то для начала нужно подождать несколько минут. Ethereum использует пиринговые сети, подобно Torrent. На поиск пиров может уйти некоторое время. Если пиры не находятся, нужно, в первую очередь посмотреть не закрыт ли порт 30030, а также не установлены ли ограничения на пиринговые сети в вашей локальной сети. Или обратитесь к системному администратору.
 
 ### Кошелек в стадии синхронизации
 
-![Screenshot 2](/img/Screenshot_2.png)
+![Screenshot 2](/img/Offer and Market/Screenshot_2.png)
 
 Если в поле информации появились `%` и шкала загрузки, то кошелек находится в процессе синхронизации. Этот процесс может занять много времени. Рекомендуется использовать систему с SSD, т.к. основная нагрузка идет на накопитель данных.
 
 ### Синхронизированный кошелек
 
-![Screenshot 3](/img/Screenshot_3.png)
+![Screenshot 3](/img/Offer and Market/Screenshot_3.png)
 
 Когда шкала загрузки пропадет, и справа, в поле информации, можно будет увидеть отсчет в секундах от времени последнего блока, кошелек синхронизирован. В сети Ethereum блоки появляются в среднем, раз в 16 секунд. Обращайте внимание, на эту информацию. Если в поле отсчета от последнего блока будут цифры выше одной,двух минут, это может говорить о проблемах с соединением.
 
@@ -40,11 +40,11 @@
 
 Чтобы добавить токен `Credits` в список наблюдаемых, нажмем кнопку `Watch Token` внизу раздела `Contracts`.
 
-![Screenshot 4](/img/Screenshot_4.png)
+![Screenshot 4](/img/Offer and Market/Screenshot_4.png)
 
 Затем, вставим адрес `Credits` в строку `TOKEN CONTRACT ADDRESS`.
 
-![Screenshot 5](/img/Screenshot_5.png)
+![Screenshot 5](/img/Offer and Market/Screenshot_5.png)
 
 Таким же образом добавим хранилище Ether, `Ether Leger`, его адрес `0x15d2b79ded1dd856070fc68e9ff4c1896934b14f`
 
@@ -55,7 +55,7 @@
 
 Добавим автономный контракт `Market` в список наблюдаемых. Для этого нажмем кнопку `Watch contract` в разделе `Contracts`.
 
-![Screenshot 6](/img/Screenshot_6.png)
+![Screenshot 6](/img/Offer and Market/Screenshot_6.png)
 
 Назовем его `Airalab Market`, вставим адрес и JSON interface, указанные выше. Контракт появится в списке наблюдаемых.
 
@@ -77,7 +77,7 @@ Address `Airalab Credits`: `0x4bc13752568B99036692bA8B1dB2c97d6Df457f4`
 
 Чтобы принять оферту, нам необходимо поменять имеющиеся у нас `ETH` на внутренние токены Airalab - `AIR`. Для этого будем использовать модуль `Market`, который мы добавили в список наблюдаемых в предыдущей части. Он представляет из себя реестр лотов на покупку/продажу различных токенов. Откроем `Market`, кликнув по нему в разделе `Contracts`.
 
-![Screenshot 7](/img/Screenshot_7.png)
+![Screenshot 7](/img/Offer and Market/Screenshot_7.png)
 
 В разделе `Read from contract` можно увидеть:
 
@@ -87,7 +87,7 @@ Address `Airalab Credits`: `0x4bc13752568B99036692bA8B1dB2c97d6Df457f4`
 Пока на рынке есть только один лот, он нам и нужен. Его адрес - `0xab15D337be4Bb066d5FA1bbA3805856983a3ef1F`. Лот, это тоже автономный контракт и чтобы с ним взаимодействовать, нужно добавить его в список наблюдаемых. Адрес указан выше, интерфейс - [JSON interface](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Lot.json)  
 Добавим его в список наблюдаемых контрактов и откроем.
 
-![Screenshot 8](/img/Screenshot_8.png)
+![Screenshot 8](/img/Offer and Market/Screenshot_8.png)
 
 В разделе `Read from contract` можно увидеть:
 
@@ -104,22 +104,22 @@ Buy - адрес покупаемого токена
 
 Контракт `Lot`, может работать только с токенами, поэтому нам нужно токенизировать ETH, находящиеся у нас на счету. Для этого просто отправим ETH на адрес `Airalab Ether Leger`.
 
-![Screenshot 9](/img/Screenshot_9.png)
+![Screenshot 9](/img/Offer and Market/Screenshot_9.png)
 
 После этой операции, нам нужно "позволить" контракту `Lot` снять необходимую сумму с контракта токена `Airalab Ether Leger` для закрытия лота.
 
 Откроем контракт `Airalab Ether Leger`
 
-![Screenshot 10](/img/Screenshot_10.png)
+![Screenshot 10](/img/Offer and Market/Screenshot_10.png)
 
 Нас интересует раздел `Write to contract`. Выберем в выпадающем списке функцию `Approve`. Заполняем:  
 
-* Address - адрес `Lot` 
+* Address - адрес `Lot`
 * Value - кол-во разрешенных к снятию токенов - 61 ETH - 61000000000000000000 Wei   
 
 Исполняем контракт нажатием кнопки `Execute`. Теперь контракт `Lot` сможет снять с вашего счета токены ETH, для своего исполнения. Откроем его:
 
-![Screenshot 11](/img/Screenshot_11.png)
+![Screenshot 11](/img/Offer and Market/Screenshot_11.png)
 
 Нас интересует раздел `Write to contract`. Выберем в выпадающем списке функцию `Deal`. Заполняем:  
 
@@ -131,7 +131,7 @@ Buy - адрес покупаемого токена
 
 Откроем контракт `Offer`, который мы добавили в список наблюдаемых в предыдущей части.
 
-![Screenshot 12](/img/Screenshot_12.png)
+![Screenshot 12](/img/Offer and Market/Screenshot_12.png)
 
 В разделе `Read from contract` можно увидеть:
 
