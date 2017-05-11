@@ -18,3 +18,4 @@ GitHub | Ethereum account address
 [EvgenRad81](https://github.com/EvgenRad81) |`0x0051d42f00673b1BAA182633f63acbD5f950A8B2`|
 [akru](https://github.com/akru) | `0x00a45AD4D870D2b5Ea165FFdaD2a6C7dF7c56c1b`
 [vol4tim](https://github.com/vol4tim) | `0x00C461FeF1F175953b68E25c6D8F36060fA8fA7D` |
+Multisig of all | `0x06c1EdC5D0fb879aB8b129dCFF1F7B704782508B` |
