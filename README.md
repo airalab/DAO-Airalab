@@ -1,8 +1,8 @@
 # Airalab DAO
 
-**Airalab congress** :: [abi](https://raw.githubusercontent.com/airalab/core/master/abi/modules/Congress.json)
+**Airalab congress** :: [abi](https://raw.githubusercontent.com/airalab/core/master/abi/Congress.json)
 
-> 0x70989E0dDED4081939Bb24A85BE1d740b9EF8221
+> 0x97282A7a15f9bEaDC854E8793AAe43B089F14b4e
 
 ## Airalab Improvement Proposals (AIPs)
 
