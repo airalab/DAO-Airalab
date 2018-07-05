@@ -1,6 +1,6 @@
 # Airalab DAO
 
-**Airalab congress** :: [abi](https://raw.githubusercontent.com/airalab/core/master/abi/Congress.json)
+**Airalab congress** :: [abi](https://github.com/airalab/robonomics_contracts/blob/deprecated/abi/Congress.json)
 
 > 0x97282A7a15f9bEaDC854E8793AAe43B089F14b4e
 
